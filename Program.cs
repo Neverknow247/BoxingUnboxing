@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace boxingUnboxing
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<object> newList = new List<object>();
+            newList.Add(7);
+            newList.Add(28);
+            newList.Add(-1);
+            newList.Add(true);
+            newList.Add("chair");
+            foreach(var l in newList){
+                Console.WriteLine(l);
+            }
+            int sum = 0;
+            for(int i = 0; i<newList.Count; i++){
+                if(newList[i] is int){
+                    sum += (int)newList[i];
+                }
+            }
+            Console.WriteLine(sum);
+        }
+    }
+}
